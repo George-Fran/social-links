@@ -1,0 +1,94 @@
+:root {
+    --verde: hsl(75, 94%, 57%);
+    --blanco: hsl(0, 0%, 100%);
+    --gris: hsl(0, 0%, 20%);
+    --grisOscuro: hsl(0, 0%, 12%);
+    --oscuroApagado: hsl(0, 0%, 8%);
+    --fuentePrincipal: "Inter", sans-serif;
+}
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; 
+}
+
+*,
+*:before
+*:after {
+    box-sizing: inherit; 
+} 
+
+body {
+    font-size: 14px;
+    font-family: var(--fuentePrincipal);
+    background: var(--oscuroApagado);
+}
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background: var(--grisOscuro);
+    text-align: center;
+    padding: 4.5rem 3.5rem;
+    border-radius: 1rem;
+    width: 41rem;
+    margin-top: 15rem;
+}
+.card__avatar{
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    margin-bottom: 3.5rem;
+}
+.card__nombre{
+    color: var(--blanco);
+    font-size: 2.5rem;
+    margin-bottom: .8rem;
+}
+.card__pais{
+    color: var(--verde);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.card__descripcion{
+    color: var(--blanco);
+    margin: 3rem 0;
+    font-size: 1.5rem;
+}
+.redes{
+    list-style: none;
+}
+.redes li {
+    margin-top: 2rem;
+}
+.redes li a{
+    display: block;
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--gris);
+    padding: 1.4rem;
+    border-radius: .7rem;
+    font-weight: 700;
+}
+.redes li a.activo, .redes li a:hover{
+    transition: background-color 0.3s ease;
+    background-color: var(--verde);
+    color: var(--oscuroApagado);
+}
+.footer{
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--blanco);
+}
+.footer p a{
+    color: var(--verde);
+}
+@media (max-width: 468px) {
+    .card{
+        margin-top: 10rem;
+        padding: 2rem;
+    }
+}
